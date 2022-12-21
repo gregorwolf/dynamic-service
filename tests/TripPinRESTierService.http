@@ -1,0 +1,4 @@
+###
+GET https://services.odata.org/TripPinRESTierService/(S(f313tqonyfpugom0pbyj1rgg))/
+###
+GET https://services.odata.org/TripPinRESTierService/(S(f313tqonyfpugom0pbyj1rgg))/$metadata
