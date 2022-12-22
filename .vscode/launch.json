@@ -5,11 +5,25 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "command": "cds run --with-mocks --in-memory?",
+      "command": "cds run --with-mocks --in-memory --port 4005",
       "name": "cds run",
       "request": "launch",
       "type": "node-terminal",
-      "skipFiles": [ "<node_internals>/**" ]
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "command": "cds import srv/external/minimal.xml --as cds --keep-namespace --dry",
+      "name": "cds import minimal",
+      "request": "launch",
+      "type": "node-terminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "command": "cds import srv/external/TripPinRESTierService.xml --as cds --keep-namespace --dry",
+      "name": "cds import TripPinRESTierService",
+      "request": "launch",
+      "type": "node-terminal",
+      "skipFiles": ["<node_internals>/**"]
     }
   ]
 }
