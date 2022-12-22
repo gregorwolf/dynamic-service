@@ -20,6 +20,8 @@ class CustomizingService extends cds.ApplicationService {
         const csn = await edmx2csn(metadata, service.name, {});
         LOG.info(csn);
         // cds.connect.to(service.destination);
+        // register csn to cds
+        //
       }
       return services;
     });
