@@ -7,4 +7,5 @@ entity Service : cuid {
     name        : String;
     destination : String;
     path        : String;
+    active      : Boolean;
 }
