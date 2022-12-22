@@ -18,10 +18,15 @@ class CustomizingService extends cds.ApplicationService {
         );
         const metadata = metadataResponse.data;
         const csn = await edmx2csn(metadata, service.name, {});
-        LOG.info(csn);
-        // cds.connect.to(service.destination);
+        LOG.debug(csn);
+        const serviceConnection = await cds.connect.to(service.name, {
+          kind: "odata",
+          model: csn,
+          credentials: { destination: service.destination, path: service.path },
+        });
         // register csn to cds
-        //
+        const books = await serviceConnection.get("Books");
+        LOG.info(books);
       }
       return services;
     });
