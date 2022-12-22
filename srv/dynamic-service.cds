@@ -14,6 +14,14 @@ service DynamicService {
                                          isKey : Boolean;
                                      }
                        }
+    };
+
+    @cds.persistence.skip
+    entity Data {
+        record : array of {
+            column : String;
+            data   : String;
+        }
     }
 
 }
