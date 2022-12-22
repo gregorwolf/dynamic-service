@@ -1,2 +1,7 @@
 ###
-GET http://localhost:4004/customizing/Service
+GET http://localhost:4005/customizing/Service
+###
+POST http://localhost:4005/customizing/loadServices
+Content-Type: application/json
+
+{}
