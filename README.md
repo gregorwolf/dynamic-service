@@ -35,7 +35,9 @@ You have to add the following content to **default-env.json**:
     },
     {
       "name": "bookshop",
-      "url": "http://localhost:4004"
+      "url": "http://localhost:4004",
+      "username": "bob",
+      "password": "bob"
     }
   ]
 }
