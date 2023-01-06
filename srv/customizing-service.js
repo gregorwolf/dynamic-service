@@ -24,9 +24,24 @@ class CustomizingService extends cds.ApplicationService {
           model: csn,
           credentials: { destination: service.destination, path: service.path },
         });
-        // register csn to cds
-        const books = await serviceConnection.get("Books");
-        LOG.info(books);
+        // Read existing Orders
+        const orders = await serviceConnection.get("Orders");
+        LOG.info(`Found ${orders.length} orders`);
+        // Create a new Order
+        const order = await serviceConnection.post("Orders", {
+          OrderNo: "42",
+          CustomerOrderNo: "Order from bob",
+          currency_code: "EUR",
+          salesOrganization: "",
+          Items: [],
+          ShippingAddress: {
+            street: "Hauptstraße 1",
+            city: "Trostberg",
+          },
+        });
+        LOG.info(order);
+        const orders2 = await serviceConnection.get("Orders");
+        LOG.info(`Found ${orders2.length} orders`);
       }
       return services;
     });
