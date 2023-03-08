@@ -16,11 +16,6 @@ In addition
 | -------------- | ----------------- |
 | `tests/`       | REST Client tests |
 
-## Next Steps
-
-- Open a new terminal and run `cds watch`
-- (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
-
 ## Connecting to services
 
 You have to add the following content to **default-env.json**:
@@ -42,3 +37,8 @@ You have to add the following content to **default-env.json**:
   ]
 }
 ```
+
+## Start the project
+
+- Open a new terminal and run `npm start`
+- In another terminal start https://github.com/gregorwolf/bookshop-demo project
