@@ -15,7 +15,7 @@
     "sqlite3": "^5"
   },
   "scripts": {
-    "start": "cds run"
+    "start": "cds run --port 4005"
   },
   "cds": {
     "requires": {
