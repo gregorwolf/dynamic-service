@@ -1,4 +1,6 @@
 ID;name;destination;path;active
 7e59db32-e903-470b-b526-a81d3dc43465;TripPinRESTierService;ODataOrg;/TripPinRESTierService/(S(f313tqonyfpugom0pbyj1rgg))/;false
 7e59db32-e903-470b-b526-a81d3dc43466;MinimalService;bookshop;/minimal/;false
-7e59db32-e903-470b-b526-a81d3dc43467;CatalogService;bookshop;/catalog/;true
+7e59db32-e903-470b-b526-a81d3dc43467;CatalogService;bookshop;/catalog/;false
+7e59db32-e903-470b-b526-a81d3dc43468;BusinessPartner;S4H;/sap/opu/odata/sap/API_BUSINESS_PARTNER/;false
+7e59db32-e903-470b-b526-a81d3dc43469;CustomerMaterial;S4H;/sap/opu/odata/sap/API_CUSTOMER_MATERIAL_SRV/;true
