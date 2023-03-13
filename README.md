@@ -33,6 +33,13 @@ You have to add the following content to **default-env.json**:
       "url": "http://localhost:4004",
       "username": "bob",
       "password": "bob"
+    },
+    {
+      "name": "S4H",
+      "url": "https://sandbox.api.sap.com/s4hanacloud",
+      "headers": {
+        "APIKey": "Your own api.sap.com API Key"
+      }
     }
   ]
 }
