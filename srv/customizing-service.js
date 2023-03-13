@@ -17,6 +17,7 @@ class CustomizingService extends cds.ApplicationService {
           { url: `${service.path}$metadata` }
         );
         const metadata = metadataResponse.data;
+        // REVISIT: Can we also get CDS back?
         const csn = await edmx2csn(metadata, service.name, {});
         LOG.debug(csn);
         const serviceConnection = await cds.connect.to(service.name, {
@@ -24,6 +25,10 @@ class CustomizingService extends cds.ApplicationService {
           model: csn,
           credentials: { destination: service.destination, path: service.path },
         });
+        // TODO: Reflect Service and iterate through Entities reading the first entry
+
+        // TODO: Run only for CatalogService
+        // if() {}
         // Read existing Orders
         const orders = await serviceConnection.get("Orders");
         LOG.info(`Found ${orders.length} orders`);
