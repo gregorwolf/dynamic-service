@@ -4,8 +4,8 @@ using {cuid} from '@sap/cds/common';
 
 @assert.unique: {name: [name], }
 entity Service : cuid {
-    name        : String;
-    destination : String;
-    path        : String;
-    active      : Boolean;
+    name        : String  @(title: '{i18n>Name}');
+    destination : String  @(title: '{i18n>Destination}');
+    path        : String  @(title: '{i18n>Path}');
+    active      : Boolean @(title: '{i18n>Active}');
 }
